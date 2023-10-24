@@ -47,18 +47,26 @@ export default function Home() {
   return (
     <>
       <div className="bg-color">
-      
         <div className="container min-vh-100 d-flex align-items-center justify-content-center py-5 py-md-0">
           <div className="col-md-7 bg-light rounded-4">
             <div className="text-center p-5">
               <h1 className="text-main fw-bolder">
-                Password <span style={{color:"#4284f1"}}>R</span><span style={{color:"#DB4437"}}>e</span><span style={{color:"#737373"}}>s</span><span style={{color:"#F4B400"}}>e</span><span style={{color:"#0F9D58"}}>t</span> Application!
+                Password <span style={{ color: "#4284f1" }}>R</span>
+                <span style={{ color: "#DB4437" }}>e</span>
+                <span style={{ color: "#737373" }}>s</span>
+                <span style={{ color: "#F4B400" }}>e</span>
+                <span style={{ color: "#0F9D58" }}>t</span> Application!
               </h1>
               <h6 className="mt-2 mb-3">
                 This app implements a secure password reset process with email
                 verification and database updates.
               </h6>
-              <img src="./image/insta-icon.png" alt="" style={{width:"10rem"}} className="my-4"/>
+              <img
+                src="./image/insta-icon.png"
+                alt=""
+                style={{ width: "10rem" }}
+                className="my-4"
+              />
               {loading ? (
                 <div className="d-flex justify-content-center">
                   <Oval
@@ -73,7 +81,11 @@ export default function Home() {
                 </div>
               ) : authToken ? (
                 <p className="text-success" style={{ fontSize: "24px" }}>
-                  {message} <span className="fw-bolder" style={{color:"#4285f4"}}>{userName}</span>!
+                  {message}{" "}
+                  <span className="fw-bolder" style={{ color: "#4285f4" }}>
+                    {userName}
+                  </span>
+                  !
                 </p>
               ) : (
                 <Link to="/login">Login</Link>

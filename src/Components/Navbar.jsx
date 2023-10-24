@@ -33,7 +33,7 @@ const Navbar = () => {
         <Link to="/" className="navbar-brand">
           <img
             src="./image/sk-logo.png"
-            alt="swasticlogo"
+            alt="swasticmedia"
             style={{ width: "10rem" }}
           />
         </Link>
@@ -52,43 +52,43 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav"> */}
-          <ul className="navbar-nav ms-auto">
-            {" "}
-            {/* "ms-auto" class pushes items to the right */}
-            {isAuthenticated ? (
-              // If the user is logged in, show avatar and logout as an icon
-              <li className="nav-item">
-                <div className="nav-link">
-                  <div className="d-flex align-items-center">
-                    <div className="avatar-badge">
-                      {/* <i class="fa fa-user icon"></i> */}
-                      {/* <span className="avatar-letter">{avatarLetter}</span> */}
-                      <Button
-                        variant="link"
-                        className="logout-icon text-white"
-                        onClick={handleLogout}
-                      >
-                        <i class="fa-solid fa-power-off"></i>
-                      </Button>
-                    </div>
+        <ul className="navbar-nav ms-auto">
+          {" "}
+          {/* "ms-auto" class pushes items to the right */}
+          {isAuthenticated ? (
+            // If the user is logged in, show avatar and logout as an icon
+            <li className="nav-item">
+              <div className="nav-link">
+                <div className="d-flex align-items-center">
+                  <div className="avatar-badge">
+                    {/* <i class="fa fa-user icon"></i> */}
+                    {/* <span className="avatar-letter">{avatarLetter}</span> */}
+                    <Button
+                      variant="link"
+                      className="logout-icon text-white"
+                      onClick={handleLogout}
+                    >
+                      <i class="fa-solid fa-power-off"></i>
+                    </Button>
                   </div>
                 </div>
-              </li>
-            ) : (
-              // If the user is not logged in, show the login link
-              <li
-                className={`nav-item ${
-                  location.pathname === "/login" ? "active" : ""
-                }`}
-              >
-                <div className="avatar-badge">
-                  <Link to="/login" className="nav-link">
+              </div>
+            </li>
+          ) : (
+            // If the user is not logged in, show the login link
+            <li
+              className={`nav-item ${
+                location.pathname === "/login" ? "active" : ""
+              }`}
+            >
+              <div className="avatar-badge">
+                <Link to="/login" className="nav-link">
                   <i class="fa fa-user icon text-white"></i>
-                  </Link>
-                </div>
-              </li>
-            )}
-          </ul>
+                </Link>
+              </div>
+            </li>
+          )}
+        </ul>
         {/* </div> */}
       </div>
     </nav>
